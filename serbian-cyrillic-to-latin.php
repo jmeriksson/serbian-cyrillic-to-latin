@@ -1,9 +1,13 @@
 <?php
 /*
  * Plugin Name: Serbian Cyrillic to Latin
+ * Plugin URI: https://github.com/jmeriksson/serbian-cyrillic-to-latin
  * Description: Converts Serbian Cyrillic characters to Latin characters.
- * Author: Mikael Tomović
- * Author URI: https://mikaeltomovic.com
+ * Author: Mikael Eriksson
+ * Author URI: https://mikaeleriksson.nu
+ * Version: 1.0.0
+ * License: GNU General Public License v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 namespace SCTL;
