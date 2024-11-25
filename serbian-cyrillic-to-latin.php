@@ -17,6 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Serbian_Cyrillic_To_Latin {
+    /**
+     * Array of Serbian Cyrillic characters and their Latin counterparts.
+     */
     public array $replace = array(
         "А" => "A",
         "Б" => "B",
@@ -87,8 +90,21 @@ class Serbian_Cyrillic_To_Latin {
         add_action( 'ngettext_with_context', array($this, 'convert_serbian_cyrillic_to_latin'), 10, 1 );
     }
 
-    public function convert_serbian_cyrillic_to_latin( string $translation ) {
+    /**
+     * Converts Serbian Cyrillic characters to Latin characters.
+     */
+    public function convert_serbian_cyrillic_to_latin( string $translation) : string {
+        if ( ! $this->is_serbian_locale() ) {
+            return $translation;
+        }
         return strtr( $translation, $this->replace );
+    }
+
+    /**
+     * Checks if the current locale is Serbian.
+     */
+    public function is_serbian_locale() : bool {
+        return get_locale() === 'sr_RS';
     }
 }
 
