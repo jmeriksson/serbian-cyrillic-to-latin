@@ -84,10 +84,10 @@ class Serbian_Cyrillic_To_Latin {
     );
 
     public function __construct() {
-        add_action( 'gettext', array($this, 'convert_serbian_cyrillic_to_latin'), 10, 1 );
-        add_action( 'gettext_with_context', array($this, 'convert_serbian_cyrillic_to_latin'), 10, 1 );
-        add_action( 'ngettext', array($this, 'convert_serbian_cyrillic_to_latin'), 10, 1 );
-        add_action( 'ngettext_with_context', array($this, 'convert_serbian_cyrillic_to_latin'), 10, 1 );
+        add_action( 'gettext', array( $this, 'convert_serbian_cyrillic_to_latin'), 10, 1 );
+        add_action( 'gettext_with_context', array( $this, 'convert_serbian_cyrillic_to_latin'), 10, 1 );
+        add_action( 'ngettext', array( $this, 'convert_serbian_cyrillic_to_latin'), 10, 1 );
+        add_action( 'ngettext_with_context', array( $this, 'convert_serbian_cyrillic_to_latin'), 10, 1 );
     }
 
     /**
