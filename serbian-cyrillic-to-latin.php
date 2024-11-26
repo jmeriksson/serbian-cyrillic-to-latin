@@ -93,7 +93,7 @@ class Serbian_Cyrillic_To_Latin {
     /**
      * Converts Serbian Cyrillic characters to Latin characters.
      */
-    public function convert_serbian_cyrillic_to_latin( string $translation) : string {
+    public function convert_serbian_cyrillic_to_latin( string $translation ) : string {
         if ( ! $this->is_serbian_locale() ) {
             return $translation;
         }
